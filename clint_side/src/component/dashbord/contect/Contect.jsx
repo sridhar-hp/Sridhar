@@ -1,14 +1,32 @@
 import React from "react";
 import "./Contect.css"
+import { useState } from "react";
+import axios from "axios";
+
 function Contect() {
+
+    const handleChange =()=>
+    {
+        const [change,setChange] = useState{
+            ()
+        }
+
+    }
+
+    const handleSubmit=(e)=>
+    {
+
+    }
+
+
     return (
 
-        <div>
-            <p>this is contect page </p>
-            <input placeholder="NAME" type="text" />
-            <input type="text" placeholder="email id" />
-            <input type="text" placeholder="message"/>
-        </div>
+        <form onSubmit={handleSubmit}>
+            <input placeholder="NAME" type="text" onChange={handleChange}/>
+            <input type="text" placeholder="email id" onChange={handleChange} />
+            <textarea type="text" placeholder="your-message" onChange={handleChange}/>
+            <button type="submit">send</button>
+        </form>
     )
 }
 export default Contect;
