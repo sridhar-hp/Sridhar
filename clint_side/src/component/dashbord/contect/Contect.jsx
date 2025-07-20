@@ -7,9 +7,9 @@ function Contect() {
 
     const handleChange =()=>
     {
-        const [change,setChange] = useState{
-            ()
-        }
+        const [change,setChange] = useState()
+            
+        
 
     }
 

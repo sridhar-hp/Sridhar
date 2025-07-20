@@ -6,25 +6,22 @@ function Dashbord() {
     return (
         <>
             <div className="layout">
-                <div className="sidebar">
-                    <img src=" /kedarnath-temple-people.jpg" alt="just profjinle" className="profilepic"/>
-                    <br />
+                <div className="navebar">
+                    
                     <Link to={"home"} className="hed" > HOME </Link>
-                    <br />
                     <Link to={"about"} className="hed" >ABOUT</Link>
-                    <br />
-                    <a className="hed" href="https://www.github.com/sridhar-hp" target="_blank" rel="noopener noreferrer">GITHUB</a>
-                    <br />
-                    <a className="hed" href="https://www.linkedin.com/in/sridhark3773" target="_blank" rel="noopener noreferrer"> LINKEDIN </a>
-                    <br />
-                    <a className="hed" href="https://leetcode.com/progress/" target="_blank" rel="noopener noreferrer">LeetCode</a>
-                    <br />
-                    <Link to={"project"} className="hed"> PROJECTS </Link>
-                    <br />
-                    <a className="hed" href="https://www.instagram.com/sridhar.k3773" target="_blank" rel="noopeneer noreferrer">INSTAGRAM</a>
-                    <br />
-                    <Link to={"contect"} className="hed"> CONTECT</Link>
-                    <br />
+                        <Link to={"project"} className="hed"> PROJECTS </Link>
+                        <Link to={"contect"} className="hed"> CONTECT</Link>
+
+                    <a className="logo" href="https://www.github.com/sridhar-hp" target="_blank" rel="noopener noreferrer"><img className="git" src="/public/Github.png" alt="githun-logo" /></a>
+                    
+                    <a className="logo" href="https://www.linkedin.com/in/sridhark3773" target="_blank" rel="noopener noreferrer"><img  src="/public/Linkedin.png" alt="" /></a>
+                    
+                    <a className="logo" href="https://leetcode.com/progress/" target="_blank" rel="noopener noreferrer"><img src="/public/leetCode-logo.png" alt="" /></a>
+                    
+                    <a className="logo" href="https://www.instagram.com/sridhar.k3773" target="_blank" rel="noopeneer noreferrer"><img src="/public/insta.gif" alt="" /></a>                
+                     
+                    <img src="/public/sridhar.jpg" alt="just profjinle" className="profilepic"/>
                     
                 </div>
                 <div className="main-content">
