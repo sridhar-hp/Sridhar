@@ -1,44 +1,510 @@
-.profilepic{
-    height: 25px;
-    width: 25px;
+/* Epic & Animatic Portfolio Styles */
+
+/* Set default font color to black for all text */
+body, .layout, .main-content, .section, .homepf, .aboutpf, .contectpf, .hed, .typing, input, textarea, button {
+  color: #111 !important;
+}
+.hed{
+
 }
 
-.navebar{
+/* Professional Portfolio Background */
+body {
+  background: linear-gradient(120deg, #579aff 0%, #106afa 100%);
+}
+
+/* Remove body padding for edge-to-edge look */
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  background: #74baff;
+}
+
+/* Premium Horizontal Navbar - Right Side */
+.navebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: unset;
+  width: 100vw;
+  height: 72px;
   display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: flex-end;
-  gap: 15px;
-
-
+  gap: 32px;
+  padding: 0 48px 0 0;
+  background: linear-gradient(90deg, #70b5ff 80%, #479dff 100%);
+  box-shadow: 0 2px 24px 0 rgba(0, 120, 212, 0.10);
+  border-bottom-left-radius: 32px;
+  border-bottom-right-radius: 0;
+  z-index: 1000;
+  backdrop-filter: blur(8px);
 }
 
-.layout{
-    display: flex;
-    flex-direction: column;
+/* Navbar Links - Premium Style */
+.hed {
+  color: #2563eb;
+  font-size: 1.18rem;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 10px 22px;
+  border-radius: 22px;
+  background: transparent;
+  transition: 
+    background 0.25s,
+    color 0.25s,
+    box-shadow 0.25s;
+  box-shadow: none;
+  position: relative;
+  letter-spacing: 1px;
+  margin: 0 2px;
+  cursor: pointer;
+}
+.hed:hover, .hed.active {
+  background: linear-gradient(90deg, #e0e7ef 60%, #c7d2fe 100%);
+  color: #1d4ed8;
+  box-shadow: 0 2px 12px 0 #ffffff;
+  font-weight: 700;
+  outline: none;
+}
+.hed:active {
+  background: #c7d2fe;
+  color: #ffffff;
 }
 
-img{
-    height:20px;
-    width: 20px;
-
+/* Social icons - subtle, premium */
+.logo img {
+  width: 36px;
+  height: 36px;
+  border-radius: 12px;
+  background: #ff848498;
+  box-shadow: 0 0 8px #fffffff8;
+  transition: transform 0.2s, box-shadow 0.2s;
+  margin: 0 2px;
+  border: 1.5px solid #ffffff6b;
+}
+.logo img:hover {
+  transform: scale(1.12) rotate(-4deg);
+  box-shadow: 0 0 16px #c7d2fe, 0 0 8px #257eeb;
+  border-color: #2563eb;
 }
 
-.git{
-     height:20px;
-    width: 20px;
-    background-color: black;
-    border-radius: 2px;
+.logo1 img {
+  width: 36px;
+  height: 36px;
+  border-radius: 12px;
+  background: #00000098;
+  box-shadow: 0 0 8px #fffffff8;
+  transition: transform 0.2s, box-shadow 0.2s;
+  margin: 0 2px;
+  border: 1.5px solid #ffffff6b;
+}
+.logo1 img:hover {
+  transform: scale(1.12) rotate(-4deg);
+  box-shadow: 0 0 16px #c7d2fe, 0 0 8px #257eeb;
+  border-color: #2563eb;
 }
 
-.profilepic{
-    height: 75px;
-    width: 75px;
+.logo2 img {
+  width: 36px;
+  height: 36px;
+  border-radius: 12px;
+  background: #ff848498;
+  box-shadow: 0 0 8px #fffffff8;
+  transition: transform 0.2s, box-shadow 0.2s;
+  margin: 0 2px;
+  border: 1.5px solid #ffffff6b;
+}
+.logo2 img:hover {
+  transform: scale(1.12) rotate(-4deg);
+  box-shadow: 0 0 16px #c7d2fe, 0 0 8px #257eeb;
+  border-color: #2563eb;
+}
+
+.logo3 img {
+  width: 36px;
+  height: 36px;
+  border-radius: 12px;
+  background: #ffffff;
+  box-shadow: 0 0 8px #fffffff8;
+  transition: transform 0.2s, box-shadow 0.2s;
+  margin: 0 2px;
+  border: 1.5px solid #ffffff6b;
+}
+.logo3 img:hover {
+  transform: scale(1.12) rotate(-4deg);
+  box-shadow: 0 0 16px #f38d1f, 0 0 8px #257eeb;
+  border-color: #2563eb;
+}
+
+.logo4 img {
+  width: 36px;
+  height: 36px;
+  border-radius: 12px;
+  background: #ffffff98;
+  box-shadow: 0 0 8px #fffffff8;
+  transition: transform 0.2s, box-shadow 0.2s;
+  margin: 0 2px;
+  border: 1.5px solid #ffffff6b;
+}
+.logo4 img:hover {
+  transform: scale(1.12) rotate(-4deg);
+  box-shadow: 0 0 16px #b356ff, 0 0 8px #257eeb;
+  border-color: #2563eb;
+}
+/* Profile Picture - Google Style, Bigger */
+.profilepic {
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  margin-left: 18px;
+  box-shadow: 0 2px 16px 0 #c7d2fe80;
+  border: 2.5px solid #e0e7ef;
+  background: #fff;
+  object-fit: cover;
+  transition: box-shadow 0.3s, border 0.3s;
+}
+.profilepic:hover {
+  box-shadow: 0 4px 32px 0 #2563eb33;
+  border: 2.5px solid #2563eb;
+}
+
+/* Main Content: add top margin for navbar */
+.main-content {
+  margin-top: 80px;
+  margin-right: 0;
+  padding: 0;
+}
+
+/* Typing Animation - Blue Gradient */
+.typing {
+  display: inline-block;
+  border-right: 2px solid #2563eb;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite;
+  max-width: 100%;
+  font-size: 1.2rem;
+  margin: 0 auto;
+  color: #2563eb;
+  background: linear-gradient(90deg, #000000 30%, #000000 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+@keyframes blink-caret {
+  0%, 100% { border-color: transparent }
+  50% { border-color: #2563eb }
+}
+
+/* Section Reveal Animation */
+.section, .homepf, .aboutpf, .contectpf {
+  opacity: 0;
+  transform: translateY(40px) scale(0.98);
+  animation: sectionFadeIn 1.2s cubic-bezier(.77,0,.18,1) forwards;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 2px 24px 0 #c7d2fe22;
+  margin-bottom: 32px;
+}
+.homepf { animation-delay: 0.2s; }
+.aboutpf { animation-delay: 0.5s; }
+.contectpf { animation-delay: 0.8s; }
+@keyframes sectionFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Epic Form Styles - Blue Buttons */
+.contectpf form {
+  background: #f1f5f9;
+  border-radius: 18px;
+  box-shadow: 0 0 24px 2px #c7d2fe55;
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  max-width: 400px;
+  margin: 40px auto;
+  animation: formPop 1.2s cubic-bezier(.77,0,.18,1) 1s forwards;
+  opacity: 0;
+  border: 1.5px solid #e0e7ef;
+}
+@keyframes formPop {
+  to { opacity: 1; transform: scale(1.03); }
+}
+.contectpf input,
+.contectpf textarea {
+  background: #fff;
+  border: none;
+  border-bottom: 2px solid #c7d2fe;
+  color: #2563eb;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  resize: none;
+  font-weight: 500;
+}
+.contectpf input:focus,
+.contectpf textarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 8px #c7d2fe;
+}
+.contectpf button {
+  background: linear-gradient(90deg, #2563eb, #c7d2fe 80%);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 0;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  box-shadow: 0 0 12px #c7d2fe88;
+  transition: background 0.3s, transform 0.2s;
+}
+.contectpf button:hover {
+  background: linear-gradient(90deg, #c7d2fe, #2563eb 80%);
+  transform: scale(1.05);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 900px) {
+  .navebar {
+    padding: 0 10px 0 0;
+    gap: 10px;
+    height: 60px;
+  }
+  .logo img, .profilepic {
+    width: 38px;
+    height: 38px;
+  }
+}
+@media (max-width: 700px) {
+  .navebar {
+    flex-direction: row;
+    height: 56px;
+    width: 100vw;
+    padding: 0 2vw 0 0;
+    gap: 4px;
+    border-radius: 0 0 18px 18px;
+    box-shadow: 0 2px 16px 0 #c7d2fe33;
+  }
+  .main-content {
+    margin-top: 64px;
+  }
+  .section, .homepf, .aboutpf, .contectpf {
+    padding: 20px 5vw;
+  }
+  .contectpf form {
+    padding: 18px 8px;
+  }
+  .hed {
+    font-size: 1rem;
+    padding: 8px 10px;
+  }
+}
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #000000, #000000);
+  color: white;
+}
+
+/* ✅ Horizontal Navbar */
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 25px;
+  padding: 15px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: rgba(255, 0, 0, 0.6);
+  backdrop-filter: blur(10px);
+  z-index: 1000;
+}
+.navebar{
+  display: flex;
+  
+}
+
+/* Links */
+.hed {
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  text-decoration: none;
+  position: relative;
+  transition: 0.3s;
+}
+
+.hed::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: rgb(4, 0, 255);
+  transition: width 0.3s;
+}
+
+.hed:hover::after {
+  width: 100%;
+}
+
+/* Social icons */
+.logo img {
+  width: 28px;
+  height: 28px;
+  transition: transform 0.3s;
+}
+.logo img:hover {
+  transform: scale(1.0);
+}
+
+/* Profile Picture */
+.profilepic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-left: 15px;
+  box-shadow: 0 0 10px rgb(13, 0, 255);
+}
+
+/* ✅ Sections */
+.main-content {
+  margin-top: 80px; /* to avoid overlap with fixed navbar */
+}
+
+.section {
+  min-height: 100vh;
+  padding: 50px;
+  text-align: center;
+  scroll-behavior: smooth;
+}
+
+.section h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+/*  */
+/* Global Background & Font */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #f9fafb;
+  color: #111827;
+}
+
+/* Navbar */
+.navebar {
+  background: linear-gradient(90deg, #2860fc, #2563eb);
+  height: 70px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 24px;
+  padding: 0 40px;
+  box-shadow: 0 2px 16px rgba(64, 115, 255, 0.985);
+  border-bottom-left-radius: 20px;
+}
+
+/* Navbar Links */
+.hed {
+  color: #ffffff;
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 8px 18px;
+  border-radius: 8px;
+  transition: 0.3s;
+}
+.hed:hover {
+  background: #ffffff;
+  color: #ffffff;
+}
+
+/* Sections */
+.section, .homepf, .aboutpf, .contectpf {
+  background: #fff;
+  margin: 30px auto;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(37, 99, 235, 0.08);
+}
+
+/* Buttons */
+.contectpf button {
+  background: linear-gradient(90deg, #f97316, #2563eb);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 20px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.3s;
+}
+.contectpf button:hover {
+  transform: scale(1.05);
+  background: linear-gradient(90deg, #2563eb, #f97316);
+}
+
+/* Inputs */
+.contectpf input,
+.contectpf textarea {
+  border: 2px solid #e5e7eb;
+  padding: 12px;
+  border-radius: 6px;
+  font-size: 1rem;
+  color: #111827;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+.contectpf input:focus,
+.contectpf textarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 6px #93c5fd;
+}
+
+/* Profile Picture */
+.profilepic {
+  border: 3px solid #2563eb;
+  border-radius: 50%;
+  width: 54px;
+  height: 54px;
+  object-fit: cover;
+  box-shadow: 0 4px 16px rgba(37, 99, 235, 0.4);
+}
+.profilepic:hover {
+  border-color: #f97316;
+  box-shadow: 0 6px 20px rgba(249, 115, 22, 0.5);
+}
+
+/* Social Icons */
+.logo img {
+  width: 32px;
+  height: 32px;
+  border-radius: 8px;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+.logo img:hover {
+  transform: scale(1.15);
+  box-shadow: 0 0 12px rgba(56, 189, 248, 0.6);
 }
 
 .hed{
-    padding: 10px;
-}
-
-.logo{
-    padding: 5px;
+  color:white
 }
