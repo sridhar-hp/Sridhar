@@ -12,10 +12,17 @@ body {
 
 /* Remove body padding for edge-to-edge look */
 body {
-  padding: 0;
   margin: 0;
-  box-sizing: border-box;
-  background: #74baff;
+  padding: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+
+  /* ✅ Background image setup */
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+    url("/Wallpaper-portfolio.jpg") center center / cover no-repeat fixed;
+
+  color: #fff;                /* text readable on dark bg */
+  min-height: 100vh;
 }
 
 /* Premium Horizontal Navbar - Right Side */
@@ -210,9 +217,9 @@ body {
   box-shadow: 0 2px 24px 0 #c7d2fe22;
   margin-bottom: 32px;
 }
-.homepf { animation-delay: 0.2s; }
-.aboutpf { animation-delay: 0.5s; }
-.contectpf { animation-delay: 0.8s; }
+#homepf { animation-delay: 0.2s; }
+#aboutpf { animation-delay: 0.5s; }
+#contectpf { animation-delay: 0.8s; }
 @keyframes sectionFadeIn {
   to {
     opacity: 1;
@@ -221,7 +228,7 @@ body {
 }
 
 /* Epic Form Styles - Blue Buttons */
-.contectpf form {
+#contectpf form {
   background: #f1f5f9;
   border-radius: 18px;
   box-shadow: 0 0 24px 2px #c7d2fe55;
@@ -238,8 +245,8 @@ body {
 @keyframes formPop {
   to { opacity: 1; transform: scale(1.03); }
 }
-.contectpf input,
-.contectpf textarea {
+#contectpf input,
+#contectpf textarea {
   background: #fff;
   border: none;
   border-bottom: 2px solid #c7d2fe;
@@ -252,12 +259,12 @@ body {
   resize: none;
   font-weight: 500;
 }
-.contectpf input:focus,
-.contectpf textarea:focus {
+#contectpf input:focus,
+#contectpf textarea:focus {
   border-color: #2563eb;
   box-shadow: 0 0 8px #c7d2fe;
 }
-.contectpf button {
+#contectpf button {
   background: linear-gradient(90deg, #2563eb, #c7d2fe 80%);
   color: #fff;
   border: none;
@@ -269,7 +276,7 @@ body {
   box-shadow: 0 0 12px #c7d2fe88;
   transition: background 0.3s, transform 0.2s;
 }
-.contectpf button:hover {
+#contectpf button:hover {
   background: linear-gradient(90deg, #c7d2fe, #2563eb 80%);
   transform: scale(1.05);
 }
@@ -302,7 +309,7 @@ body {
   .section, .homepf, .aboutpf, .contectpf {
     padding: 20px 5vw;
   }
-  .contectpf form {
+  #contectpf form {
     padding: 18px 8px;
   }
   .hed {
@@ -311,13 +318,15 @@ body {
   }
 }
 .layout {
-  display: flex;
-  flex-direction: column;
   min-height: 100vh;
-  font-family: Arial, sans-serif;
-  background: linear-gradient(135deg, #000000, #000000);
-  color: white;
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+    url("/Wallpaper-portfolio.jpg") center center / cover no-repeat fixed;
+  color: #fff;
 }
+
+
+
 
 /* ✅ Horizontal Navbar */
 .navbar {
@@ -387,11 +396,24 @@ body {
 }
 
 .section {
-  min-height: 100vh;
-  padding: 50px;
-  text-align: center;
-  scroll-behavior: smooth;
+  background: rgba(255, 255, 255, 0.12); /* More transparent */
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  padding: 30px;
+  margin: 20px;
+  color: #f9fafb;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
 }
+
+.section:hover {
+  background: rgba(255, 255, 255, 0.18); /* Slightly brighter on hover */
+  transform: scale(1.01);
+}
+
+
 
 .section h1 {
   font-size: 3rem;
@@ -399,13 +421,13 @@ body {
 }
 /*  */
 /* Global Background & Font */
-body {
+/* body {
   margin: 0;
   padding: 0;
   font-family: "Segoe UI", Arial, sans-serif;
   background: #f9fafb;
   color: #111827;
-}
+} */
 
 /* Navbar */
 .navebar {
@@ -444,7 +466,7 @@ body {
 }
 
 /* Buttons */
-.contectpf button {
+#contectpf button {
   background: linear-gradient(90deg, #f97316, #2563eb);
   color: #fff;
   border: none;
@@ -455,14 +477,14 @@ body {
   cursor: pointer;
   transition: transform 0.2s, background 0.3s;
 }
-.contectpf button:hover {
+#contectpf button:hover {
   transform: scale(1.05);
   background: linear-gradient(90deg, #2563eb, #f97316);
 }
 
 /* Inputs */
-.contectpf input,
-.contectpf textarea {
+#contectpf input,
+#contectpf textarea {
   border: 2px solid #e5e7eb;
   padding: 12px;
   border-radius: 6px;
@@ -470,8 +492,8 @@ body {
   color: #111827;
   transition: border-color 0.3s, box-shadow 0.3s;
 }
-.contectpf input:focus,
-.contectpf textarea:focus {
+#contectpf input:focus,
+#contectpf textarea:focus {
   border-color: #2563eb;
   box-shadow: 0 0 6px #93c5fd;
 }
@@ -504,4 +526,7 @@ body {
 
 .hed{
   color:white
+}
+html {
+  scroll-behavior: smooth;
 }
