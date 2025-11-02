@@ -27,12 +27,11 @@ function Dashbord() {
     useEffect(() => {
         const scrollInterval = setInterval(() => {
             window.scrollBy({
-                top: 2, // speed (increase for faster)
+                top: 2, 
                 behavior: "smooth",
             });
-        }, 20); // every 20ms
+        }, 20); 
 
-        // Stop scroll when bottom reached
         const stopScroll = () => {
             if (
                 window.innerHeight + window.scrollY >=
