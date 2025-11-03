@@ -186,7 +186,7 @@ body {
 .typing {
   display: inline-block;
   border-right: 2px solid #2563eb;
-  white-space: nowrap;
+  white-space: normal; /* ✅ allow line breaks */
   overflow: hidden;
   animation: typing 4s steps(40, end), blink-caret 0.75s step-end infinite;
   max-width: 100%;
@@ -198,6 +198,8 @@ body {
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+
 @keyframes typing {
   from { width: 0 }
   to { width: 100% }
@@ -219,7 +221,7 @@ body {
 }
 #homepf { animation-delay: 0.2s; }
 #aboutpf { animation-delay: 0.5s; }
-#contectpf { animation-delay: 0.8s; }
+.contectpf { animation-delay: 0.8s; }
 @keyframes sectionFadeIn {
   to {
     opacity: 1;
@@ -228,7 +230,7 @@ body {
 }
 
 /* Epic Form Styles - Blue Buttons */
-#contectpf form {
+.contectpf form {
   background: #f1f5f9;
   border-radius: 18px;
   box-shadow: 0 0 24px 2px #c7d2fe55;
@@ -245,8 +247,8 @@ body {
 @keyframes formPop {
   to { opacity: 1; transform: scale(1.03); }
 }
-#contectpf input,
-#contectpf textarea {
+.contectpf input,
+.contectpf textarea {
   background: #fff;
   border: none;
   border-bottom: 2px solid #c7d2fe;
@@ -259,12 +261,12 @@ body {
   resize: none;
   font-weight: 500;
 }
-#contectpf input:focus,
-#contectpf textarea:focus {
+.contectpf input:focus,
+.contectpf textarea:focus {
   border-color: #2563eb;
   box-shadow: 0 0 8px #c7d2fe;
 }
-#contectpf button {
+.contectpf button {
   background: linear-gradient(90deg, #2563eb, #c7d2fe 80%);
   color: #fff;
   border: none;
@@ -276,7 +278,7 @@ body {
   box-shadow: 0 0 12px #c7d2fe88;
   transition: background 0.3s, transform 0.2s;
 }
-#contectpf button:hover {
+.contectpf button:hover {
   background: linear-gradient(90deg, #c7d2fe, #2563eb 80%);
   transform: scale(1.05);
 }
@@ -309,7 +311,7 @@ body {
   .section, .homepf, .aboutpf, .contectpf {
     padding: 20px 5vw;
   }
-  #contectpf form {
+  .contectpf form {
     padding: 18px 8px;
   }
   .hed {
@@ -466,7 +468,7 @@ body {
 }
 
 /* Buttons */
-#contectpf button {
+.contectpf button {
   background: linear-gradient(90deg, #f97316, #2563eb);
   color: #fff;
   border: none;
@@ -477,14 +479,14 @@ body {
   cursor: pointer;
   transition: transform 0.2s, background 0.3s;
 }
-#contectpf button:hover {
+.contectpf button:hover {
   transform: scale(1.05);
   background: linear-gradient(90deg, #2563eb, #f97316);
 }
 
 /* Inputs */
-#contectpf input,
-#contectpf textarea {
+.contectpf input,
+.contectpf textarea {
   border: 2px solid #e5e7eb;
   padding: 12px;
   border-radius: 6px;
@@ -492,8 +494,8 @@ body {
   color: #111827;
   transition: border-color 0.3s, box-shadow 0.3s;
 }
-#contectpf input:focus,
-#contectpf textarea:focus {
+.contectpf input:focus,
+.contectpf textarea:focus {
   border-color: #2563eb;
   box-shadow: 0 0 6px #93c5fd;
 }
@@ -529,4 +531,33 @@ body {
 }
 html {
   scroll-behavior: smooth;
+}
+
+.socialmedia{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 20px;
+  background-color:#2563eb;
+  border-radius: 12px;
+  padding: 10px;
+}
+section, 
+.homepf, 
+.aboutpf, 
+.contectpf {
+  scroll-margin-top: 80px; /* Adjust according to your navbar height */
+}
+
+h3{
+  color:#2563eb
+}
+
+.contectpf form {
+  background: #b8dbff;
+  border-radius: 18px;  
+  box-shadow: 0 0 24px 2px #c7d2fe55;
+  padding: 32px 24px;
+  
 }
